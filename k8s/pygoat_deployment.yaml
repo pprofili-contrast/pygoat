@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: pygoat
+spec: 
+  replicas: 1
+  selector: 
+    matchLabels: 
+      component: pygoat
+  template:
+    metadata:
+      labels:
+        component: pygoat
+    spec:
+      containers:
+      - name: pygoat
+        image: pprofili/pygoat:k8s
+        ports: 
+          - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: contrast-config  
+        # Volume Mount for contrast_security.yaml  
+        volumeMounts:
+        - name: contrast-security
+          readOnly: false
+          mountPath: "/etc/contrast"
+        resources:
+          requests:
+            cpu: 0.5
+            memory: 0.5Gi
+          limits:
+            cpu: 1.0
+            memory: 1Gi
+      # Volume from contrast-security secret     
+      volumes:
+      - name: contrast-security
+        secret:
+          secretName: contrast-security

@@ -48,13 +48,13 @@ Setting up the Kubernetes environment
 ```yaml
 api: 
   url: http(s)://<your contrast UI hostname>/Contrast #For example https://app.contrastsecurity.com/Contrast
-  api\_key: <apiKey>
-  service\_key: <serviceKey>
-  user\_name: agent\_<hashcode>@<domain>
+  api_key: <apiKey>
+  service_key: <serviceKey>
+  user_name: agent_<hashcode>@<domain>
 ```
 Now generate a secret using this file as follows:
 ```
-kubectl create secret generic contrast-security --from-file=./contrast\_security.yaml
+kubectl create secret generic contrast-security --from-file=./contrast_security.yaml
 ```
 This secret can be used by all Contrast agents, so it is preferable to keep it generic and make any application-level configuration changes using [environment variables](https://docs.contrastsecurity.com/en/environment-variables.html).
 
@@ -122,8 +122,8 @@ kubectl get all
 ```
 You should see something like this:
 ```
-NAME READY STATUS RESTARTS AGE  
-pod/pygoat-6f9f959d69-46dqv 1/1 Running 0 3m19s
+NAME                        READY STATUS  RESTARTS AGE  
+pod/pygoat-6f9f959d69-46dqv 1/1   Running 0        3m19s
 ```
 And check the logs for the `pygoat` container within that pod, like so:
 ```

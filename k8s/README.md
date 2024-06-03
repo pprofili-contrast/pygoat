@@ -1,6 +1,6 @@
 
 **Note: Contrast has released an Agent Operator for Kubernetes which can simplify the addition of Contrast agents into your environment, without the need for any of the steps detailed below. If that is of interest, more information can be found [here in our documentation.](https://docs.contrastsecurity.com/en/agent-operator.html)**
-
+---
 This guide provides a working example of _**manually**_ setting up and configuring the Contrast Python agent within a Kubernetes environment.   For the Contrast Agent Operator, see [here](https://docs.contrastsecurity.com/en/agent-operator.html).
 
 This guide assumes you have a basic working knowledge of git, Docker and Kubernetes.

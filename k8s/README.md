@@ -27,7 +27,7 @@ And line 32 modifies the CMD instruction for the container to add the Contrast R
 ```
 CMD ["contrast-python-run","--","/usr/local/bin/python","/app/manage.py","runserver","0.0.0.0:8000"]
 ```
-For more details on adding the Contrast agent to your application/image. [See our docker guide on the subject](/hc/en-us/articles/360053414951 "https://support.contrastsecurity.com/hc/en-us/articles/360053414951-Python-agent-with-Docker").
+For more details on adding the Contrast agent to your application/image. [See our docker guide on the subject](https://support.contrastsecurity.com/hc/en-us/articles/360053414951-Python-agent-with-Docker).
 
 1.  In your terminal, navigate to the cloned repo's folder and run the following command to build the docker image with a tag that references your docker repository.
 ```

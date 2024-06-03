@@ -11,7 +11,7 @@ Prerequisites
 1.  You will require access to a Kubernetes environment, either in the cloud (for example [Amazon's EKS](https://aws.amazon.com/eks/) or [Microsoft's AKS](https://azure.microsoft.com/en-us/products/kubernetes-service)).  Alternatively, you can set up a local Kubernetes environment.  Two options are [Docker Desktop](https://docs.docker.com/desktop/) and [minikube](https://minikube.sigs.k8s.io/docs/start/).
 2.  Clone the following GitHub repository that will be used in this tutorial:
 ```
-git clone [https://github.com/Contrast-Security-OSS/PyGoat.git](https://github.com/Contrast-Security-OSS/PyGoat.git)
+git clone https://github.com/Contrast-Security-OSS/PyGoat.git
 ```
 Building the Python application's image with Contrast
 -----------------------------------------------------

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pygoat
-        image: pprofili/pygoat:contrast
+        image: pprofili/pygoat:k8s
         ports: 
           - containerPort: 8080
         envFrom:
